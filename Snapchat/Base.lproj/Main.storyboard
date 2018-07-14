@@ -148,11 +148,27 @@
                         <outlet property="decriptionTextField" destination="x62-z6-Dwm" id="uBP-rW-CLU"/>
                         <outlet property="imageView" destination="w0I-Ow-nUE" id="hrV-De-cco"/>
                         <outlet property="nextButton" destination="CdM-cj-FiF" id="cV3-Xt-EZM"/>
+                        <segue destination="FUp-dW-adk" kind="show" identifier="selectUserSegue" id="QQ0-qy-aZm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zgq-ci-6WY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2600" y="102"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Sbh-L3-Jqm">
+            <objects>
+                <viewController id="FUp-dW-adk" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ceO-Et-K9V">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="liF-7i-XXZ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y6h-WP-HvT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3367" y="101"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hCe-bp-CiC">
