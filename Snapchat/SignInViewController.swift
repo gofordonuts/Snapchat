@@ -8,7 +8,6 @@
 
 import UIKit
 import Firebase
-import FirebaseAuth
 
 class SignInViewController: UIViewController {
 
@@ -29,6 +28,8 @@ class SignInViewController: UIViewController {
                         print("Error creating new account: \(String(describing: error))")
                     } else {
                         print("Successfully created new account")
+                    Database.database().reference().child("users").child(user!.user.uid).child("email").setValue(user!.user.email)
+                        
                         self.performSegue(withIdentifier: "signInSegue", sender: nil)
                     }
                 })
@@ -39,5 +40,5 @@ class SignInViewController: UIViewController {
             }
         }
     }
-    
+
 }

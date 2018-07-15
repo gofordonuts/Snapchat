@@ -73,10 +73,10 @@
             </objects>
             <point key="canvasLocation" x="-79.200000000000003" y="98.50074962518741"/>
         </scene>
-        <!--View Controller-->
+        <!--Snaps View Controller-->
         <scene sceneID="Xuz-ZQ-A3r">
             <objects>
-                <viewController id="nfi-ln-Svv" sceneMemberID="viewController">
+                <viewController id="nfi-ln-Svv" customClass="SnapsViewController" customModule="Snapchat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ssw-PB-0eG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -84,6 +84,11 @@
                         <viewLayoutGuide key="safeArea" id="4pG-VB-HGq"/>
                     </view>
                     <navigationItem key="navigationItem" id="ava-xE-lTI">
+                        <barButtonItem key="leftBarButtonItem" title="Log Out" id="wLm-dO-B8D">
+                            <connections>
+                                <action selector="logoutTapped:" destination="nfi-ln-Svv" id="SMs-Go-qbP"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="XYF-Ta-bbV">
                             <connections>
                                 <segue destination="VRn-tG-ogP" kind="show" id="JrY-uL-nOX"/>
@@ -155,16 +160,31 @@
             </objects>
             <point key="canvasLocation" x="2600" y="102"/>
         </scene>
-        <!--View Controller-->
+        <!--Select User View Controller-->
         <scene sceneID="Sbh-L3-Jqm">
             <objects>
-                <viewController id="FUp-dW-adk" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="FUp-dW-adk" customClass="SelectUserViewController" customModule="Snapchat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ceO-Et-K9V">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uMe-sp-b4H">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="liF-7i-XXZ" firstAttribute="trailing" secondItem="uMe-sp-b4H" secondAttribute="trailing" id="1Dx-te-3lu"/>
+                            <constraint firstItem="uMe-sp-b4H" firstAttribute="leading" secondItem="liF-7i-XXZ" secondAttribute="leading" id="1wk-at-BcQ"/>
+                            <constraint firstItem="liF-7i-XXZ" firstAttribute="bottom" secondItem="uMe-sp-b4H" secondAttribute="bottom" id="soX-jV-T3I"/>
+                            <constraint firstItem="uMe-sp-b4H" firstAttribute="top" secondItem="liF-7i-XXZ" secondAttribute="top" id="voC-wI-7aF"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="liF-7i-XXZ"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="uMe-sp-b4H" id="f1g-y3-giJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y6h-WP-HvT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
